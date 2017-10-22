@@ -1,0 +1,32 @@
+<ion-view title="Signup" id="page3">
+  <ion-content padding="true" class="has-header">
+
+  <ul class='users'>
+    <% for(var i=0; i<users.length; i++) {%>
+      <li class='user'>
+        <span><%= users[i].name %></span>
+        <span><%= users[i].email %></span>
+        <span><%= users[i].password %></span>
+      </li>
+    <% } %>
+  </ul>
+
+    <form id="signup-form9" method = 'POST' action='/users' class="list">
+      <ion-list id="signup-list2">
+        <label class="item item-input" id="signup-input6">
+          <span class="input-label">Name</span>
+          <input type="text" placeholder="Audrey Olson" name='name'>
+        </label>
+        <label class="item item-input" id="signup-input7">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="Email@Email.com" name='email'>
+        </label>
+        <label class="item item-input" id="signup-input8">
+          <span class="input-label">Password</span>
+          <input type="text" placeholder="******" name='password'>
+        </label>
+      </ion-list>
+     <button type='submit' id="signup-button4" class="button button-stable button-block">Sign up</button>
+    </form>
+  </ion-content>
+</ion-view>
